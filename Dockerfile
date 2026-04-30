@@ -15,6 +15,10 @@ RUN groupadd --gid 537828491 bh && \
     ln -s /saves /home/bh/GNUstep/Library/ApplicationSupport/TheBlockheads/saves && \
     chown -R bh:bh /home/bh/GNUstep /blockheads /saves
 
+COPY run.sh /blockheads/run.sh
+RUN chmod +x /blockheads/run.sh && \
+    chown bh:bh /blockheads/run.sh
+
 USER bh
 RUN tar -xzvf blockheads_server171.tar.gz && \
     chmod +x blockheads_server171 && \
@@ -28,4 +32,4 @@ RUN tar -xzvf blockheads_server171.tar.gz && \
     patchelf --replace-needed libicudata.so.48 libicudata.so.70 blockheads_server171 && \
     patchelf --replace-needed libdispatch.so libdispatch.so.0 blockheads_server171
 
-ENTRYPOINT ["./blockheads_server171"]
+ENTRYPOINT ["/blockheads/run.sh"]
