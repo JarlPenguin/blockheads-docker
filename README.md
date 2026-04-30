@@ -3,8 +3,10 @@
 The server for The Blockheads in a Docker container. Unofficial, unsupported by Dave or Majic Jungle.
 
 ```sh
-docker run --restart=always -v "$PWD/saves:/saves" -p 15151:15151/udp ghcr.io/wingysam/blockheads-docker --new "MY WORLD" --no-exit
+docker run -dit --restart=always -v "$PWD/saves:/saves" -p 15151:15151/udp ghcr.io/wingysam/blockheads-docker --new "MY WORLD" --no-exit
 ```
+
+Alternatively, use the provided `docker-compose.yml`.
 
 If you see an error like "No such file or directory", you may need to fix your permissions. Try this:
 
