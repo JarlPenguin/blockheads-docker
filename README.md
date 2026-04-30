@@ -45,3 +45,5 @@ Available options:
 ### Undocumented Command-line Arguments
 
 * `--no-exit` prevents the server from shutting down when the last player leaves. This means that chat doesn't clear every time the last player leaves.
+
+* `--owner PLAYER_NAME` sets the owner of the server.
