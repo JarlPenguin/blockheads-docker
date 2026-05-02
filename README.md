@@ -3,7 +3,7 @@
 The server for The Blockheads in a Docker container. Unofficial, unsupported by Dave or Majic Jungle.
 
 ```sh
-docker run -dit --restart=always -v "$PWD/saves:/saves" -p 15151:15151/udp ghcr.io/wingysam/blockheads-docker --new "MY WORLD" --no-exit
+docker run -dit --restart=always -v "$PWD/saves:/saves" -p 15151:15151/udp ghcr.io/wingysam/blockheads-docker --new "MY WORLD" --world_id a405c821dc4f9a0ef3162d9f37ce7666 --no-exit
 ```
 
 Alternatively, use the provided `docker-compose.yml`.
