@@ -8,6 +8,8 @@ docker run -dit --restart=always -v "$PWD/saves:/saves" -p 15151:15151/udp ghcr.
 
 Alternatively, use the provided `docker-compose.yml`.
 
+Optionally replace `"MY WORLD"` with the desired name of your world and generate a valid world ID using the command `openssl rand -hex 16`.
+
 If you see an error like "No such file or directory", you may need to fix your permissions. Try this:
 
 ```
